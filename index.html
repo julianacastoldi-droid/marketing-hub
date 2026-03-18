@@ -43,6 +43,7 @@ body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#0F172A;display:fle
 .sc .vl{font-size:26px;font-weight:600;line-height:1}
 .sc .dt{width:8px;height:8px;border-radius:50%;position:absolute;top:16px;right:16px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:22px}
 .cd{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:18px 20px;margin-bottom:16px}
 .st{font-size:14px;font-weight:600;margin-bottom:14px}
 .bdg{display:inline-flex;align-items:center;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:500;white-space:nowrap}
@@ -82,16 +83,16 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
 .vt button.on{background:#2563EB;color:#fff}
 .cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
 .ec{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:16px 18px;cursor:pointer;transition:.15s}
-.ec:hover{border-color:#93C5FD}
+.ec:hover{border-color:#93C5FD;box-shadow:0 2px 8px rgba(37,99,235,.08)}
 .ect{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
 .ecn{font-size:14px;font-weight:600;line-height:1.3}
 .ecs{font-size:20px;font-weight:700;color:#2563EB}
 .bc{display:flex;flex-direction:column;gap:8px}
 .bro{display:flex;align-items:center;gap:10px}
-.bll{font-size:12px;color:#475569;width:72px;flex-shrink:0;text-align:right}
+.bll{font-size:12px;color:#475569;width:80px;flex-shrink:0;text-align:right}
 .bt{flex:1;background:#F1F5F9;border-radius:4px;height:8px;overflow:hidden}
 .bf{height:100%;border-radius:4px;background:#2563EB}
-.bv{font-size:12px;color:#475569;width:20px;text-align:right}
+.bv{font-size:12px;color:#475569;width:24px;text-align:right;flex-shrink:0}
 .hg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
 .hc{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:24px 20px;cursor:pointer;transition:.15s;position:relative}
 .hc:hover{border-color:#2563EB;transform:translateY(-2px);box-shadow:0 4px 16px rgba(37,99,235,.1)}
@@ -108,7 +109,46 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
 .wi.dn .wn{background:#16A34A;color:#fff}
 .cb{background:#E2E8F0;border-radius:99px;height:10px;overflow:hidden;margin:6px 0}
 .cf{height:100%;border-radius:99px;transition:.4s}
-@media(max-width:768px){#sb{width:56px}.lbl,.ni span,.logo p,.logo h1{display:none}.ni{justify-content:center;padding:10px}.fgr{grid-template-columns:1fr}.dg{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.con{padding:16px}}
+/* INSIGHT CARDS */
+.ins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+.ins{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 16px;border-left:4px solid #2563EB}
+.ins.green{border-left-color:#16A34A}
+.ins.amber{border-left-color:#F59E0B}
+.ins.red{border-left-color:#DC2626}
+.ins.purple{border-left-color:#7C3AED}
+.ins-label{font-size:11px;color:#475569;margin-bottom:4px;font-weight:500}
+.ins-val{font-size:22px;font-weight:700;color:#0F172A}
+.ins-sub{font-size:11px;color:#64748B;margin-top:2px}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.on{display:flex}
+.modal{background:#fff;border-radius:16px;width:100%;max-width:680px;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.modal-header{padding:20px 24px 16px;border-bottom:1px solid #E2E8F0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;position:sticky;top:0;background:#fff;z-index:1;border-radius:16px 16px 0 0}
+.modal-title{font-size:16px;font-weight:600;line-height:1.3}
+.modal-close{background:none;border:none;cursor:pointer;font-size:20px;color:#475569;padding:0;line-height:1;flex-shrink:0}
+.modal-body{padding:20px 24px}
+.modal-section{margin-bottom:20px}
+.modal-section-title{font-size:12px;font-weight:600;color:#2563EB;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #DBEAFE}
+.modal-field{margin-bottom:12px}
+.modal-field-label{font-size:11px;color:#475569;font-weight:500;margin-bottom:3px}
+.modal-field-value{font-size:13px;color:#0F172A;line-height:1.5}
+.modal-field-value.highlight{background:#EFF6FF;border-left:3px solid #2563EB;padding:8px 12px;border-radius:0 6px 6px 0;color:#1E40AF}
+.modal-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.modal-grid-item{background:#F8FAFC;border-radius:8px;padding:10px 12px}
+.modal-grid-label{font-size:11px;color:#475569;margin-bottom:2px}
+.modal-grid-value{font-size:13px;font-weight:500}
+/* SCORE RING */
+.score-ring{display:flex;align-items:center;gap:16px;background:#F8FAFC;border-radius:12px;padding:14px 18px;margin-bottom:16px}
+.score-big{font-size:36px;font-weight:700;color:#2563EB;line-height:1}
+.score-info .score-label{font-size:12px;color:#475569;margin-bottom:2px}
+.score-info .score-bar-wrap{width:140px;background:#E2E8F0;border-radius:99px;height:8px;overflow:hidden;margin-top:6px}
+.score-info .score-bar-fill{height:100%;border-radius:99px;background:#2563EB}
+/* APRENDIZADO CARD */
+.ap-card{background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.ap-card p{font-size:13px;color:#92400E;line-height:1.5}
+.ap-card .ap-next{font-size:12px;color:#B45309;margin-top:6px;font-weight:500}
+@media(max-width:768px){#sb{width:56px}.lbl,.ni span,.logo p,.logo h1{display:none}.ni{justify-content:center;padding:10px}.fgr{grid-template-columns:1fr}.dg{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.g3{grid-template-columns:1fr}.con{padding:16px}.modal{max-height:95vh}}
 </style>
 </head>
 <body>
@@ -132,6 +172,18 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
   </div>
   <div class="foot">v1.0 MVP</div>
 </nav>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title"></div>
+      <button class="modal-close" onclick="hd('modal-overlay')">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
 <div id="main">
 
 <div class="pg on" id="p-home">
@@ -144,28 +196,45 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
   </div></div>
 </div>
 
+<!-- GL DASHBOARD -->
 <div class="pg" id="p-gd">
   <div class="tb"><div><h2>Dashboard — Growth Lab</h2><p>Visão geral dos experimentos</p></div><div class="tr"><button class="btn bo sm" onclick="glLoad()">↻ Atualizar</button><button class="btn bp sm" onclick="gp('gn')">+ Novo teste</button></div></div>
   <div class="con">
     <div id="gl-sp" class="sp" style="display:none"><div class="spi"></div>Carregando dados...</div>
     <div id="gl-er" class="bn br" style="display:none"><strong>Erro na conexão</strong><p id="gl-em"></p></div>
     <div id="gl-bd" style="display:none">
+      <!-- KPIs principais -->
       <div class="sg" id="gl-st"></div>
-      <div class="g2"><div class="cd"><div class="st">Testes por canal</div><div id="gl-cc" class="bc"></div></div><div class="cd"><div class="st">Testes por status</div><div id="gl-cs" class="bc"></div></div></div>
-      <div class="cd"><div class="st">🔥 Top prioridades</div><div class="tw"><table><thead><tr><th>Teste</th><th>Canal</th><th>Status</th><th>Score</th><th>Prioridade</th></tr></thead><tbody id="gl-tp"></tbody></table></div></div>
+      <!-- Insights -->
+      <div class="ins-grid" id="gl-insights"></div>
+      <!-- Gráficos -->
+      <div class="g2">
+        <div class="cd"><div class="st">Testes por canal</div><div id="gl-cc" class="bc"></div></div>
+        <div class="cd"><div class="st">Testes por status</div><div id="gl-cs" class="bc"></div></div>
+      </div>
+      <div class="g2">
+        <div class="cd"><div class="st">Taxa de sucesso por canal</div><div id="gl-taxa" class="bc"></div></div>
+        <div class="cd"><div class="st">Distribuição de resultados</div><div id="gl-res" class="bc"></div></div>
+      </div>
+      <!-- Top prioridades -->
+      <div class="cd"><div class="st">🔥 Top prioridades por score</div><div class="tw"><table><thead><tr><th>Teste</th><th>Canal</th><th>Status</th><th>Score</th><th>Resultado</th></tr></thead><tbody id="gl-tp"></tbody></table></div></div>
+      <!-- Aprendizados recentes -->
+      <div class="cd"><div class="st">💡 Aprendizados recentes</div><div id="gl-ap-rec"></div></div>
     </div>
   </div>
 </div>
 
+<!-- GL TESTES -->
 <div class="pg" id="p-gt">
   <div class="tb"><div><h2>Testes</h2><p>Todos os experimentos</p></div><div class="tr"><div class="vt"><button class="on" id="vt-t" onclick="sv('t')">☰ Tabela</button><button id="vt-c" onclick="sv('c')">⊞ Cards</button></div><button class="btn bp sm" onclick="gp('gn')">+ Novo</button></div></div>
   <div class="con">
     <div class="fi"><div class="sw"><span class="si">⌕</span><input id="f-nm" placeholder="Buscar..." oninput="rT()"></div><select id="f-st" onchange="rT()"><option value="">Status</option></select><select id="f-cn" onchange="rT()"><option value="">Canal</option></select><select id="f-sg" onchange="rT()"><option value="">Segmento</option></select><select id="f-et" onchange="rT()"><option value="">Etapa</option></select><select id="f-rp" onchange="rT()"><option value="">Responsável</option></select></div>
-    <div id="tv-t"><div class="tw"><table><thead><tr><th>Teste</th><th>Canal</th><th>Status</th><th>Etapa</th><th>Responsável</th><th>Score</th><th>Prioridade</th></tr></thead><tbody id="t-tb"></tbody></table></div></div>
+    <div id="tv-t"><div class="tw"><table><thead><tr><th>Teste</th><th>Canal</th><th>Status</th><th>Etapa</th><th>Responsável</th><th>Score</th><th>Resultado</th></tr></thead><tbody id="t-tb"></tbody></table></div></div>
     <div id="tv-c" style="display:none" class="cg"></div>
   </div>
 </div>
 
+<!-- GL NOVO -->
 <div class="pg" id="p-gn">
   <div class="tb"><div><h2>Novo teste</h2><p>Cadastrar experimento no Notion</p></div></div>
   <div class="con"><div class="cd">
@@ -202,6 +271,7 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
   </div></div>
 </div>
 
+<!-- GL APRENDIZADOS -->
 <div class="pg" id="p-ga">
   <div class="tb"><div><h2>Aprendizados</h2><p>Testes concluídos com insights</p></div></div>
   <div class="con">
@@ -210,36 +280,34 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
   </div>
 </div>
 
+<!-- GL BACKLOG -->
 <div class="pg" id="p-gb">
   <div class="tb"><div><h2>Backlog</h2><p>Ideias e testes priorizados</p></div><div class="tr"><select id="bl-s" onchange="rB()" style="padding:7px 12px;border:1px solid #E2E8F0;border-radius:8px;font-size:13px;font-family:inherit;background:#fff"><option value="score">Por Score</option><option value="prio">Por Prioridade</option><option value="data">Por Data</option></select></div></div>
   <div class="con"><div id="b-ls"></div></div>
 </div>
 
-<div class="pg" id="p-gx">
-  <div class="tb"><div><button class="btn bo sm" onclick="gp(prev)" style="margin-bottom:6px">← Voltar</button><h2 id="dx-ti">Detalhe</h2></div></div>
-  <div class="con" id="dx-bd"></div>
-</div>
-
+<!-- DM DASHBOARD -->
 <div class="pg" id="p-dd">
   <div class="tb"><div><h2>Dashboard — Demandas</h2><p>Solicita Marketing 2.0</p></div><div class="tr"><button class="btn bp sm" onclick="gp('dn')">+ Nova demanda</button></div></div>
   <div class="con">
     <div id="dm-sp" class="sp" style="display:none"><div class="spi"></div>Carregando demandas...</div>
     <div id="dm-er" class="bn br" style="display:none"><strong>Erro</strong><p id="dm-em"></p></div>
     <div id="dm-bd">
-      <div class="sg">
-        <div class="sc"><div class="lb">Total</div><div class="vl" id="dm-to">—</div><div class="dt" style="background:#60A5FA"></div></div>
-        <div class="sc"><div class="lb">Em andamento</div><div class="vl" id="dm-an">—</div><div class="dt" style="background:#F59E0B"></div></div>
-        <div class="sc"><div class="lb">Concluídas</div><div class="vl" id="dm-cn">—</div><div class="dt" style="background:#16A34A"></div></div>
-        <div class="sc"><div class="lb">Incompletas</div><div class="vl" id="dm-in">—</div><div class="dt" style="background:#DC2626"></div></div>
+      <div class="sg" id="dm-kpis"></div>
+      <div class="ins-grid" id="dm-insights"></div>
+      <div class="g2">
+        <div class="cd"><div class="st">Por tipo de demanda</div><div id="dm-ct" class="bc"></div></div>
+        <div class="cd"><div class="st">Por status</div><div id="dm-cs" class="bc"></div></div>
       </div>
       <div class="g2">
-        <div class="cd"><div class="st">Por tipo</div><div id="dm-ct" class="bc"></div></div>
-        <div class="cd"><div class="st">Score médio de completude</div><div style="text-align:center;padding:20px 0"><div style="font-size:42px;font-weight:700;color:#2563EB" id="dm-sm">—</div><div style="font-size:13px;color:#475569;margin-top:4px">% completude média</div></div></div>
+        <div class="cd"><div class="st">Por área executora</div><div id="dm-ca" class="bc"></div></div>
+        <div class="cd"><div class="st">Score médio de completude</div><div style="text-align:center;padding:20px 0"><div style="font-size:48px;font-weight:700;color:#2563EB" id="dm-sm">—</div><div style="font-size:13px;color:#475569;margin-top:4px">% completude média</div><div id="dm-comp-bar" style="margin-top:12px"></div></div></div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- DM LISTA -->
 <div class="pg" id="p-dl">
   <div class="tb"><div><h2>Solicitações</h2></div><div class="tr"><button class="btn bp sm" onclick="gp('dn')">+ Nova</button></div></div>
   <div class="con">
@@ -252,6 +320,7 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
   </div>
 </div>
 
+<!-- DM NOVA -->
 <div class="pg" id="p-dn">
   <div class="tb"><div><h2>Nova solicitação</h2></div></div>
   <div class="con"><div class="cd">
@@ -281,6 +350,7 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:#F8FAFC}
   </div></div>
 </div>
 
+<!-- DM INCOMPLETAS -->
 <div class="pg" id="p-di">
   <div class="tb"><div><h2>Demandas incompletas</h2></div></div>
   <div class="con"><div id="di-bd"><div class="em"><div class="ei">⚠️</div><p>Carregando...</p></div></div></div>
@@ -308,14 +378,14 @@ function gp(id) {
   if (id === 'dd' || id === 'dl' || id === 'di') { if (!DM.length) { dmLoad(); } }
 }
 
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) { hd('modal-overlay'); }
+}
+
 function sbInvoke(fn, body) {
   return fetch(SB_URL + '/functions/v1/' + fn, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + SB_KEY,
-      'apikey': SB_KEY
-    },
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + SB_KEY, 'apikey': SB_KEY },
     body: JSON.stringify(body)
   }).then(function(r) {
     return r.json().then(function(d) {
@@ -372,30 +442,24 @@ function fromNotionPage(page) {
   var aprendizados = getRt(p['Aprendizados']);
   var proximo = getRt(p['Próximo passo']);
   var hipotese = getRt(p['Hipótese']) || getRt(p['Hipotese']);
-  var score_num = (p['Score'] && p['Score'].number != null) ? p['Score'].number : completude;
+  var segmento = getSel(p['Segmento']) || getRt(p['Segmento']);
+  var score_num = (p['Score'] && p['Score'].number != null) ? p['Score'].number : null;
+  var obs = getRt(p['Observações extras']) || getRt(p['Observações']);
+  var links = getRt(p['Insira aqui links e documentações úteis']);
   return {
     id: page.id,
-    titulo: titulo,
-    nome: nome || titulo,
-    tipo: tipo,
-    tipoLabel: TLABELS[tipo] || tipo,
+    titulo: titulo, nome: nome || titulo,
+    tipo: tipo, tipoLabel: TLABELS[tipo] || tipo,
     status: status_gl || status,
     statusLabel: SLABELS[status] || status,
-    area: area,
-    squad: getMsel(p['Qual área ou Squad demandante?']).join(', '),
-    solicitante: solicitante,
-    prazo: prazo,
-    objetivo: objetivo,
+    area: area, squad: getMsel(p['Qual área ou Squad demandante?']).join(', '),
+    solicitante: solicitante, prazo: prazo, objetivo: objetivo,
     prioridade: PMAP[prioridade] || prioridade || 'media',
-    canal: canal,
-    etapa: etapa,
-    responsavel: responsavel,
-    resultado: resultado,
-    aprendizados: aprendizados,
-    proximo: proximo,
-    hipotese: hipotese,
-    score: score_num,
-    completude: completude,
+    canal: canal, etapa: etapa, segmento: segmento,
+    responsavel: responsavel, resultado: resultado,
+    aprendizados: aprendizados, proximo: proximo,
+    hipotese: hipotese, score: score_num,
+    completude: completude, obs: obs, links: links,
     createdAt: page.created_time
   };
 }
@@ -429,9 +493,7 @@ function glLoad() {
   }).catch(function(e) {
     document.getElementById('gl-em').textContent = e.message;
     sh('gl-er');
-  }).finally(function() {
-    hd('gl-sp');
-  });
+  }).finally(function() { hd('gl-sp'); });
 }
 
 function dmLoad() {
@@ -447,40 +509,130 @@ function dmLoad() {
   }).catch(function(e) {
     document.getElementById('dm-em').textContent = e.message;
     sh('dm-er');
-  }).finally(function() {
-    hd('dm-sp');
-  });
+  }).finally(function() { hd('dm-sp'); });
 }
+
+function pct(a, b) { return b > 0 ? Math.round(a / b * 100) : 0; }
 
 function rDash() {
   var tot = GL.length;
-  var and = 0, con = 0, pos = 0;
+  var and = 0, con = 0, pos = 0, neg = 0, ideia = 0, backlog = 0;
   for (var i = 0; i < GL.length; i++) {
-    if (GL[i].status === 'Em andamento') { and++; }
-    if (GL[i].status === 'Concluído') { con++; }
-    if (GL[i].resultado === 'Positivo') { pos++; }
+    var s = GL[i].status;
+    var r = GL[i].resultado;
+    if (s === 'Em andamento') { and++; }
+    if (s === 'Concluído') { con++; }
+    if (s === 'Ideia') { ideia++; }
+    if (s === 'Backlog') { backlog++; }
+    if (r === 'Positivo') { pos++; }
+    if (r === 'Negativo') { neg++; }
   }
+  var taxaSucesso = con > 0 ? pct(pos, con) : 0;
+
+  // KPIs
   document.getElementById('gl-st').innerHTML =
-    '<div class="sc"><div class="lb">Total de testes</div><div class="vl">' + tot + '</div><div class="dt" style="background:#60A5FA"></div></div>' +
-    '<div class="sc"><div class="lb">Em andamento</div><div class="vl">' + and + '</div><div class="dt" style="background:#F59E0B"></div></div>' +
-    '<div class="sc"><div class="lb">Concluídos</div><div class="vl">' + con + '</div><div class="dt" style="background:#16A34A"></div></div>' +
-    '<div class="sc"><div class="lb">Resultado positivo</div><div class="vl">' + pos + '</div><div class="dt" style="background:#16A34A"></div></div>';
+    kpi('Total de testes', tot, '#60A5FA') +
+    kpi('Em andamento', and, '#F59E0B') +
+    kpi('Concluídos', con, '#16A34A') +
+    kpi('Resultado positivo', pos, '#16A34A') +
+    kpi('Backlog + Ideias', ideia + backlog, '#7C3AED') +
+    kpi('Taxa de sucesso', taxaSucesso + '%', taxaSucesso >= 50 ? '#16A34A' : '#DC2626');
+
+  // Insights
+  var canalMap = {};
+  var canalPos = {};
+  for (var i = 0; i < GL.length; i++) {
+    var cn = GL[i].canal || 'Sem canal';
+    canalMap[cn] = (canalMap[cn] || 0) + 1;
+    if (GL[i].resultado === 'Positivo') { canalPos[cn] = (canalPos[cn] || 0) + 1; }
+  }
+  var melhorCanal = '';
+  var melhorTaxa = 0;
+  for (var k in canalMap) {
+    if (canalMap[k] >= 2) {
+      var t2 = pct(canalPos[k] || 0, canalMap[k]);
+      if (t2 > melhorTaxa) { melhorTaxa = t2; melhorCanal = k; }
+    }
+  }
+  var comAprendizado = 0;
+  for (var i = 0; i < GL.length; i++) { if (GL[i].aprendizados) { comAprendizado++; } }
+
+  document.getElementById('gl-insights').innerHTML =
+    ins('Taxa de sucesso geral', taxaSucesso + '%', con + ' testes concluídos', taxaSucesso >= 60 ? 'green' : taxaSucesso >= 30 ? 'amber' : 'red') +
+    ins('Melhor canal', melhorCanal || '—', melhorCanal ? melhorTaxa + '% de positivos' : 'Dados insuficientes', 'purple') +
+    ins('Com aprendizados', comAprendizado, pct(comAprendizado, tot) + '% dos testes documentados', 'green') +
+    ins('Em backlog/ideias', ideia + backlog, 'aguardando priorização', ideia + backlog > 5 ? 'amber' : 'green');
+
+  // Gráficos
   rBar('gl-cc', GL, 'canal');
   rBar('gl-cs', GL, 'status', {'Em andamento':'#3B82F6','Concluído':'#16A34A','Ideia':'#94A3B8','Backlog':'#7C3AED','Pausado':'#F59E0B','Cancelado':'#DC2626'});
-  var top = [];
-  for (var i = 0; i < GL.length; i++) { if (GL[i].score != null) { top.push(GL[i]); } }
-  top = top.slice(0, 8);
+
+  // Taxa sucesso por canal
+  var taxaEntries = [];
+  for (var k in canalMap) {
+    if (canalMap[k] >= 1) {
+      taxaEntries.push({k:k, v:pct(canalPos[k]||0, canalMap[k]), n:canalMap[k]});
+    }
+  }
+  taxaEntries.sort(function(a,b){return b.v-a.v;});
+  var taxaHtml = '';
+  for (var i = 0; i < Math.min(taxaEntries.length, 6); i++) {
+    var e = taxaEntries[i];
+    var label = e.k.length > 10 ? e.k.slice(0,9)+'…' : e.k;
+    var color = e.v >= 60 ? '#16A34A' : e.v >= 30 ? '#F59E0B' : '#DC2626';
+    taxaHtml += '<div class="bro"><span class="bll">' + label + '</span><div class="bt"><div class="bf" style="width:'+e.v+'%;background:'+color+'"></div></div><span class="bv">'+e.v+'%</span></div>';
+  }
+  document.getElementById('gl-taxa').innerHTML = taxaHtml || '<span style="font-size:12px;color:#475569">Sem dados</span>';
+
+  // Distribuição resultados
+  var resMap = {'Positivo':0,'Negativo':0,'Neutro':0,'Inconclusivo':0};
+  var resColors = {'Positivo':'#16A34A','Negativo':'#DC2626','Neutro':'#94A3B8','Inconclusivo':'#F59E0B'};
+  for (var i = 0; i < GL.length; i++) { if (GL[i].resultado) { resMap[GL[i].resultado]++; } }
+  var maxRes = 1;
+  for (var k in resMap) { if (resMap[k] > maxRes) { maxRes = resMap[k]; } }
+  var resHtml = '';
+  for (var k in resMap) {
+    if (resMap[k] === 0) { continue; }
+    resHtml += '<div class="bro"><span class="bll">'+k+'</span><div class="bt"><div class="bf" style="width:'+Math.round(resMap[k]/maxRes*100)+'%;background:'+resColors[k]+'"></div></div><span class="bv">'+resMap[k]+'</span></div>';
+  }
+  document.getElementById('gl-res').innerHTML = resHtml || '<span style="font-size:12px;color:#475569">Sem resultados registrados</span>';
+
+  // Top prioridades
+  var top = GL.filter(function(t) { return t.score != null; }).slice(0, 8);
   var html = '';
   for (var i = 0; i < top.length; i++) {
     var t = top[i];
-    html += '<tr class="cl" onclick="oD(\'' + t.id + '\')">' +
+    html += '<tr class="cl" onclick="openGLModal(\'' + t.id + '\')">' +
       '<td style="font-weight:500">' + t.nome + '</td>' +
       '<td>' + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '—') + '</td>' +
       '<td>' + bS(t.status) + '</td>' +
-      '<td><strong style="color:#2563EB">' + (t.score != null ? t.score : '—') + '</strong></td>' +
-      '<td>' + bP(t.prioridade) + '</td></tr>';
+      '<td><strong style="color:#2563EB">' + t.score + '</strong></td>' +
+      '<td>' + bR(t.resultado) + '</td></tr>';
   }
   document.getElementById('gl-tp').innerHTML = html || '<tr><td colspan="5" style="text-align:center;color:#475569;padding:20px">Sem dados com score.</td></tr>';
+
+  // Aprendizados recentes
+  var apList = GL.filter(function(t) { return t.aprendizados; }).slice(0, 4);
+  var apHtml = '';
+  for (var i = 0; i < apList.length; i++) {
+    var t = apList[i];
+    apHtml += '<div class="ap-card" style="cursor:pointer" onclick="openGLModal(\'' + t.id + '\')">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">' +
+      '<strong style="font-size:13px;color:#0F172A">' + t.nome + '</strong>' +
+      bR(t.resultado) + '</div>' +
+      '<p>' + t.aprendizados.slice(0, 150) + (t.aprendizados.length > 150 ? '…' : '') + '</p>' +
+      (t.proximo ? '<div class="ap-next">→ ' + t.proximo.slice(0, 80) + '</div>' : '') +
+      '</div>';
+  }
+  document.getElementById('gl-ap-rec').innerHTML = apHtml || '<div class="em" style="padding:20px"><div class="ei">💡</div><p>Nenhum aprendizado registrado ainda.</p></div>';
+}
+
+function kpi(label, val, color) {
+  return '<div class="sc"><div class="lb">' + label + '</div><div class="vl">' + val + '</div><div class="dt" style="background:' + color + '"></div></div>';
+}
+
+function ins(label, val, sub, type) {
+  return '<div class="ins ' + (type||'') + '"><div class="ins-label">' + label + '</div><div class="ins-val">' + val + '</div><div class="ins-sub">' + sub + '</div></div>';
 }
 
 function rBar(id, arr, field, colorMap) {
@@ -492,19 +644,99 @@ function rBar(id, arr, field, colorMap) {
   var entries = [];
   for (var k in map) { entries.push([k, map[k]]); }
   entries.sort(function(a, b) { return b[1] - a[1]; });
-  entries = entries.slice(0, 6);
+  entries = entries.slice(0, 7);
   var max = 1;
   for (var i = 0; i < entries.length; i++) { if (entries[i][1] > max) { max = entries[i][1]; } }
   var html = '';
   for (var i = 0; i < entries.length; i++) {
     var k = entries[i][0], v = entries[i][1];
-    var label = k.length > 10 ? k.slice(0, 9) + '…' : k;
+    var label = k.length > 12 ? k.slice(0, 11) + '…' : k;
     var color = (colorMap && colorMap[k]) ? colorMap[k] : '#2563EB';
-    html += '<div class="bro"><span class="bll">' + label + '</span>' +
-      '<div class="bt"><div class="bf" style="width:' + Math.round(v/max*100) + '%;background:' + color + '"></div></div>' +
-      '<span class="bv">' + v + '</span></div>';
+    html += '<div class="bro"><span class="bll">' + label + '</span><div class="bt"><div class="bf" style="width:' + Math.round(v/max*100) + '%;background:' + color + '"></div></div><span class="bv">' + v + '</span></div>';
   }
   document.getElementById(id).innerHTML = html || '<span style="font-size:12px;color:#475569">Sem dados</span>';
+}
+
+// MODAL GROWTH LAB
+function openGLModal(id) {
+  var t = null;
+  for (var i = 0; i < GL.length; i++) { if (GL[i].id === id) { t = GL[i]; break; } }
+  if (!t) { return; }
+  document.getElementById('modal-title').textContent = t.nome;
+  var body = '';
+
+  // Meta badges
+  body += '<div class="modal-meta">' + bS(t.status) + bP(t.prioridade) + bR(t.resultado);
+  if (t.canal) { body += '<span class="bdg bbl">' + t.canal + '</span>'; }
+  if (t.etapa) { body += '<span class="bdg bgy">' + t.etapa + '</span>'; }
+  body += '</div>';
+
+  // Score
+  if (t.score != null) {
+    var scorePct = Math.min(t.score, 100);
+    body += '<div class="score-ring"><div class="score-big">' + t.score + '</div><div class="score-info"><div class="score-label">Score ICE</div><div style="font-size:11px;color:#475569">Impacto × Confiança ÷ Esforço</div><div class="score-bar-wrap"><div class="score-bar-fill" style="width:' + scorePct + '%"></div></div></div></div>';
+  }
+
+  // Grid de infos
+  body += '<div class="modal-grid" style="margin-bottom:16px">';
+  if (t.responsavel) { body += mgi('Responsável', t.responsavel); }
+  if (t.segmento) { body += mgi('Segmento', t.segmento); }
+  if (t.prazo) { body += mgi('Data prevista', t.prazo); }
+  if (t.canal) { body += mgi('Canal', t.canal); }
+  body += '</div>';
+
+  // Seções
+  if (t.objetivo) { body += msec('Objetivo', t.objetivo); }
+  if (t.hipotese) { body += msec('Hipótese', t.hipotese); }
+  if (t.aprendizados) {
+    body += '<div class="modal-section"><div class="modal-section-title">💡 Aprendizados</div><div class="modal-field-value highlight">' + t.aprendizados + '</div></div>';
+  }
+  if (t.proximo) { body += msec('Próximo passo', t.proximo); }
+  if (t.obs) { body += msec('Observações', t.obs); }
+
+  document.getElementById('modal-body').innerHTML = body;
+  sh('modal-overlay');
+}
+
+// MODAL DEMANDAS
+function openDMModal(id) {
+  var t = null;
+  for (var i = 0; i < DM.length; i++) { if (DM[i].id === id) { t = DM[i]; break; } }
+  if (!t) { return; }
+  document.getElementById('modal-title').textContent = t.titulo;
+  var body = '';
+
+  body += '<div class="modal-meta">';
+  if (t.tipoLabel) { body += '<span class="bdg bbl">' + t.tipoLabel + '</span>'; }
+  body += '<span class="bdg bgy">' + (t.statusLabel || t.status) + '</span>';
+  if (t.prioridade) { body += bP(t.prioridade); }
+  body += '</div>';
+
+  // Completude
+  var compColor = t.completude >= 80 ? '#16A34A' : t.completude >= 50 ? '#F59E0B' : '#DC2626';
+  body += '<div style="background:#F8FAFC;border-radius:10px;padding:12px 16px;margin-bottom:16px">';
+  body += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:12px;color:#475569;font-weight:500">Score de completude</span><strong style="color:' + compColor + '">' + t.completude + '%</strong></div>';
+  body += '<div style="background:#E2E8F0;border-radius:99px;height:8px;overflow:hidden"><div style="height:100%;border-radius:99px;background:' + compColor + ';width:' + t.completude + '%"></div></div></div>';
+
+  body += '<div class="modal-grid" style="margin-bottom:16px">';
+  if (t.solicitante) { body += mgi('Solicitante', t.solicitante); }
+  if (t.area) { body += mgi('Área executora', t.area); }
+  if (t.squad) { body += mgi('Squad', t.squad); }
+  if (t.prazo) { body += mgi('Prazo desejado', t.prazo); }
+  body += '</div>';
+
+  if (t.objetivo) { body += msec('Objetivo da ação', t.objetivo); }
+  if (t.obs) { body += msec('Observações', t.obs); }
+
+  document.getElementById('modal-body').innerHTML = body;
+  sh('modal-overlay');
+}
+
+function mgi(label, val) {
+  return '<div class="modal-grid-item"><div class="modal-grid-label">' + label + '</div><div class="modal-grid-value">' + val + '</div></div>';
+}
+function msec(label, val) {
+  return '<div class="modal-section"><div class="modal-section-title">' + label + '</div><div class="modal-field-value">' + val + '</div></div>';
 }
 
 function pF() {
@@ -520,8 +752,7 @@ function pF() {
       if (v && !seen[v]) {
         seen[v] = true;
         var o = document.createElement('option');
-        o.value = v; o.text = v;
-        el.appendChild(o);
+        o.value = v; o.text = v; el.appendChild(o);
       }
     }
   }
@@ -552,30 +783,30 @@ function gF() {
 
 function rT() {
   if (!GL.length) {
-    document.getElementById('t-tb').innerHTML = '<tr><td colspan="7" style="text-align:center;color:#475569;padding:24px">Conectando ao Notion...</td></tr>';
+    document.getElementById('t-tb').innerHTML = '<tr><td colspan="7" style="text-align:center;color:#475569;padding:24px">Carregando dados...</td></tr>';
     return;
   }
   var d = gF();
   var html = '';
   for (var i = 0; i < d.length; i++) {
     var t = d[i];
-    html += '<tr class="cl" onclick="oD(\'' + t.id + '\')">' +
+    html += '<tr class="cl" onclick="openGLModal(\'' + t.id + '\')">' +
       '<td style="font-weight:500">' + t.nome + '</td>' +
       '<td>' + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '—') + '</td>' +
       '<td>' + bS(t.status) + '</td>' +
       '<td><span class="bdg bgy">' + (t.etapa || '—') + '</span></td>' +
       '<td style="color:#475569">' + (t.responsavel || '—') + '</td>' +
       '<td><strong style="color:#2563EB">' + (t.score != null ? t.score : '—') + '</strong></td>' +
-      '<td>' + bP(t.prioridade) + '</td></tr>';
+      '<td>' + bR(t.resultado) + '</td></tr>';
   }
   document.getElementById('t-tb').innerHTML = html || '<tr><td colspan="7" style="text-align:center;color:#475569;padding:20px">Nenhum resultado.</td></tr>';
   var chtml = '';
   for (var i = 0; i < d.length; i++) {
     var t = d[i];
-    chtml += '<div class="ec" onclick="oD(\'' + t.id + '\')">' +
+    chtml += '<div class="ec" onclick="openGLModal(\'' + t.id + '\')">' +
       '<div class="ect"><div class="ecn">' + t.nome + '</div><div class="ecs">' + (t.score != null ? t.score : '—') + '</div></div>' +
-      '<div style="font-size:12px;color:#475569;margin-bottom:8px;line-height:1.4">' + (t.hipotese || '').slice(0, 80) + ((t.hipotese || '').length > 80 ? '…' : '') + '</div>' +
-      '<div style="display:flex;gap:6px;flex-wrap:wrap">' + bS(t.status) + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '') + bP(t.prioridade) + '</div></div>';
+      '<div style="font-size:12px;color:#475569;margin-bottom:8px;line-height:1.4">' + (t.hipotese || '').slice(0, 80) + '</div>' +
+      '<div style="display:flex;gap:6px;flex-wrap:wrap">' + bS(t.status) + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '') + bR(t.resultado) + '</div></div>';
   }
   document.getElementById('tv-c').innerHTML = chtml;
 }
@@ -598,7 +829,7 @@ function rA() {
     if (n && t.nome.toLowerCase().indexOf(n) < 0) { continue; }
     if (cn && t.canal !== cn) { continue; }
     if (rs && t.resultado !== rs) { continue; }
-    html += '<div class="cd" style="cursor:pointer" onclick="oD(\'' + t.id + '\')">' +
+    html += '<div class="cd" style="cursor:pointer" onclick="openGLModal(\'' + t.id + '\')">' +
       '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px">' +
       '<div style="font-size:14px;font-weight:600">' + t.nome + '</div>' +
       '<div style="display:flex;gap:6px">' + bR(t.resultado) + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '') + '</div></div>' +
@@ -618,12 +849,12 @@ function rB() {
   d.sort(function(a, b) {
     if (s === 'score') { return (b.score || 0) - (a.score || 0); }
     if (s === 'prio') { var m = {'Alta':3,'Média':2,'Baixa':1}; return (m[b.prioridade] || 0) - (m[a.prioridade] || 0); }
-    return (b.data || '').localeCompare(a.data || '');
+    return (b.prazo || '').localeCompare(a.prazo || '');
   });
   var html = '';
   for (var i = 0; i < d.length; i++) {
     var t = d[i];
-    html += '<div class="cd" style="cursor:pointer;display:flex;align-items:center;gap:16px" onclick="oD(\'' + t.id + '\')">' +
+    html += '<div class="cd" style="cursor:pointer;display:flex;align-items:center;gap:16px" onclick="openGLModal(\'' + t.id + '\')">' +
       '<div style="font-size:20px;font-weight:700;color:#CBD5E1;width:28px;text-align:center">' + (i+1) + '</div>' +
       '<div style="flex:1"><div style="font-size:14px;font-weight:600;margin-bottom:4px">' + t.nome + '</div>' +
       '<div style="display:flex;gap:6px;flex-wrap:wrap">' + bP(t.prioridade) + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '') + (t.etapa ? '<span class="bdg bgy">' + t.etapa + '</span>' : '') + '</div></div>' +
@@ -632,24 +863,118 @@ function rB() {
   document.getElementById('b-ls').innerHTML = html || '<div class="em"><div class="ei">📋</div><p>Nenhum item no backlog.</p></div>';
 }
 
-function oD(id) {
-  var t = null;
-  for (var i = 0; i < GL.length; i++) { if (GL[i].id === id) { t = GL[i]; break; } }
-  if (!t) { return; }
-  document.getElementById('dx-ti').textContent = t.nome || 'Detalhe';
-  document.getElementById('dx-bd').innerHTML =
-    '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">' + bS(t.status) + bP(t.prioridade) + bR(t.resultado) + (t.canal ? '<span class="bdg bbl">' + t.canal + '</span>' : '') + '</div>' +
-    '<div class="dg">' +
-    '<div class="df"><div class="dl">Score</div><div class="dv" style="font-size:22px;font-weight:700;color:#2563EB">' + (t.score != null ? t.score : '—') + '</div></div>' +
-    '<div class="df"><div class="dl">Responsável</div><div class="dv">' + (t.responsavel || '—') + '</div></div>' +
-    '<div class="df"><div class="dl">Canal</div><div class="dv">' + (t.canal || '—') + '</div></div>' +
-    '<div class="df"><div class="dl">Etapa</div><div class="dv">' + (t.etapa || '—') + '</div></div>' +
-    '<div class="df ful"><div class="dl">Objetivo</div><div class="dv">' + (t.objetivo || '—') + '</div></div>' +
-    '<div class="df ful"><div class="dl">Hipótese</div><div class="dv">' + (t.hipotese || '—') + '</div></div>' +
-    (t.aprendizados ? '<div class="df ful"><div class="dl">Aprendizados</div><div class="dv" style="background:#EFF6FF;border-left:3px solid #2563EB;padding:10px;border-radius:0 6px 6px 0">' + t.aprendizados + '</div></div>' : '') +
-    (t.proximo ? '<div class="df ful"><div class="dl">Próximo passo</div><div class="dv">' + t.proximo + '</div></div>' : '') +
-    '</div>';
-  gp('gx');
+function rDmD() {
+  var tot = DM.length;
+  var and = 0, con = 0, inc = 0, nova = 0;
+  var totalComp = 0;
+  for (var i = 0; i < DM.length; i++) {
+    if (DM[i].status === 'em_andamento') { and++; }
+    if (DM[i].status === 'concluida') { con++; }
+    if (DM[i].status === 'nova_solicitacao') { nova++; }
+    if (DM[i].completude < 100) { inc++; }
+    totalComp += DM[i].completude || 0;
+  }
+  var avgComp = tot > 0 ? Math.round(totalComp / tot) : 0;
+
+  document.getElementById('dm-kpis').innerHTML =
+    kpi('Total de demandas', tot, '#60A5FA') +
+    kpi('Novas', nova, '#7C3AED') +
+    kpi('Em andamento', and, '#F59E0B') +
+    kpi('Concluídas', con, '#16A34A') +
+    kpi('Incompletas', inc, '#DC2626') +
+    kpi('Taxa de conclusão', pct(con, tot) + '%', pct(con,tot) >= 50 ? '#16A34A' : '#F59E0B');
+
+  // Insights demandas
+  var tipoMap = {};
+  for (var i = 0; i < DM.length; i++) {
+    var tl = DM[i].tipoLabel || 'Outro';
+    tipoMap[tl] = (tipoMap[tl] || 0) + 1;
+  }
+  var tipoTop = '';
+  var tipoMax = 0;
+  for (var k in tipoMap) { if (tipoMap[k] > tipoMax) { tipoMax = tipoMap[k]; tipoTop = k; } }
+
+  document.getElementById('dm-insights').innerHTML =
+    ins('Taxa de conclusão', pct(con,tot) + '%', con + ' de ' + tot + ' demandas', pct(con,tot) >= 50 ? 'green' : 'amber') +
+    ins('Tipo mais frequente', tipoTop || '—', tipoTop ? tipoMax + ' solicitações' : '—', 'purple') +
+    ins('Completude média', avgComp + '%', 'das informações preenchidas', avgComp >= 80 ? 'green' : avgComp >= 50 ? 'amber' : 'red') +
+    ins('Demandas incompletas', inc, pct(inc, tot) + '% precisam de atenção', inc > 0 ? 'red' : 'green');
+
+  rBar('dm-ct', DM, 'tipoLabel', {'GTM':'#7C3AED','Arte/Design':'#2563EB','Vídeo':'#16A34A','Landing Page':'#F59E0B'});
+
+  // Status demandas
+  var stMap = {};
+  for (var i = 0; i < DM.length; i++) {
+    var sl = DM[i].statusLabel || DM[i].status || 'Outro';
+    stMap[sl] = (stMap[sl] || 0) + 1;
+  }
+  var stEntries = [];
+  for (var k in stMap) { stEntries.push([k, stMap[k]]); }
+  stEntries.sort(function(a,b){return b[1]-a[1];});
+  var stMax = stEntries.length > 0 ? stEntries[0][1] : 1;
+  var stHtml = '';
+  for (var i = 0; i < stEntries.length; i++) {
+    var label = stEntries[i][0].length > 12 ? stEntries[i][0].slice(0,11)+'…' : stEntries[i][0];
+    stHtml += '<div class="bro"><span class="bll">'+label+'</span><div class="bt"><div class="bf" style="width:'+Math.round(stEntries[i][1]/stMax*100)+'%"></div></div><span class="bv">'+stEntries[i][1]+'</span></div>';
+  }
+  document.getElementById('dm-cs').innerHTML = stHtml || '<span style="font-size:12px;color:#475569">Sem dados</span>';
+
+  rBar('dm-ca', DM, 'area');
+
+  document.getElementById('dm-sm').textContent = avgComp + '%';
+  var compColor = avgComp >= 80 ? '#16A34A' : avgComp >= 50 ? '#F59E0B' : '#DC2626';
+  document.getElementById('dm-comp-bar').innerHTML = '<div style="background:#E2E8F0;border-radius:99px;height:10px;overflow:hidden;margin:0 auto;max-width:200px"><div style="height:100%;border-radius:99px;background:'+compColor+';width:'+avgComp+'%"></div></div>';
+}
+
+function rD() {
+  var n = (document.getElementById('dm-fn') ? document.getElementById('dm-fn').value : '').toLowerCase();
+  var ft = document.getElementById('dm-ft') ? document.getElementById('dm-ft').value : '';
+  var fs = document.getElementById('dm-fs') ? document.getElementById('dm-fs').value : '';
+  var html = '';
+  for (var i = 0; i < DM.length; i++) {
+    var x = DM[i];
+    if (n && (x.titulo || '').toLowerCase().indexOf(n) < 0) { continue; }
+    if (ft && x.tipoLabel !== ft) { continue; }
+    if (fs && x.status !== fs) { continue; }
+    var compColor = x.completude >= 80 ? '#16A34A' : x.completude >= 50 ? '#F59E0B' : '#DC2626';
+    html += '<div class="cd" style="cursor:pointer" onclick="openDMModal(\'' + x.id + '\')">' +
+      '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">' +
+      '<div style="flex:1">' +
+      '<div style="font-size:14px;font-weight:600;margin-bottom:6px">' + x.titulo + '</div>' +
+      '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">' +
+      (x.tipoLabel ? '<span class="bdg bbl">' + x.tipoLabel + '</span>' : '') +
+      '<span class="bdg bgy">' + (x.statusLabel || x.status || '') + '</span></div>' +
+      (x.objetivo ? '<div style="font-size:12px;color:#475569;line-height:1.4">' + x.objetivo.slice(0,100) + (x.objetivo.length>100?'…':'') + '</div>' : '') +
+      '</div>' +
+      '<div style="text-align:right;flex-shrink:0">' +
+      '<div style="font-size:11px;color:#475569">' + (x.solicitante || '') + '</div>' +
+      '<div style="font-size:11px;color:#475569;margin-top:2px">' + (x.prazo || '') + '</div>' +
+      '<div style="background:#E2E8F0;border-radius:99px;height:5px;width:60px;overflow:hidden;margin-top:6px;margin-left:auto"><div style="height:100%;border-radius:99px;background:' + compColor + ';width:' + x.completude + '%"></div></div>' +
+      '<div style="font-size:10px;color:#475569;margin-top:2px">' + x.completude + '%</div>' +
+      '</div></div></div>';
+  }
+  document.getElementById('dl-bd').innerHTML = html || '<div class="em"><div class="ei">📋</div><p>Nenhuma demanda encontrada.</p></div>';
+}
+
+function rI() {
+  var html = '';
+  for (var i = 0; i < DM.length; i++) {
+    var x = DM[i];
+    if (x.completude >= 100) { continue; }
+    var miss = [];
+    if (!x.titulo) { miss.push('Título'); }
+    if (!x.tipoLabel) { miss.push('Tipo'); }
+    if (!x.solicitante) { miss.push('Solicitante'); }
+    if (!x.prazo) { miss.push('Prazo'); }
+    html += '<div class="cd" style="cursor:pointer" onclick="openDMModal(\'' + x.id + '\')">' +
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">' +
+      '<div style="font-size:14px;font-weight:600">' + x.titulo + '</div>' +
+      '<span class="bdg bam">' + x.completude + '% completo</span></div>' +
+      '<div style="font-size:12px;color:#DC2626">Faltando: ' + miss.join(', ') + '</div>' +
+      '<div style="background:#E2E8F0;border-radius:99px;height:6px;overflow:hidden;margin-top:8px">' +
+      '<div style="height:100%;border-radius:99px;background:#F59E0B;width:' + x.completude + '%"></div></div></div>';
+  }
+  document.getElementById('di-bd').innerHTML = html || '<div class="em"><div class="ei">✅</div><p>Nenhuma demanda incompleta!</p></div>';
 }
 
 function cICE() {
@@ -668,7 +993,6 @@ function clN() {
 }
 
 function svT() {
-  if (!GL.length && !document.getElementById('n-no').value) { alert('Configure a conexão com o Notion primeiro.'); return; }
   var nome = document.getElementById('n-no').value.trim();
   if (!nome) { alert('Informe o nome do teste.'); return; }
   var imp = +(document.getElementById('n-im').value) || null;
@@ -704,90 +1028,13 @@ function svT() {
   sbInvoke('growth-proxy', {action:'create', properties:props}).then(function() {
     var ok = document.getElementById('n-ok');
     ok.innerHTML = '<strong>✓ Teste cadastrado com sucesso!</strong>';
-    sh('n-ok');
-    clN();
+    sh('n-ok'); clN();
     setTimeout(function() { hd('n-ok'); }, 5000);
     glLoad();
   }).catch(function(e) {
     document.getElementById('n-er').innerHTML = '<strong>Erro ao salvar</strong><p>' + e.message + '</p>';
     sh('n-er');
   }).finally(function() { hd('n-sp'); });
-}
-
-function rDmD() {
-  document.getElementById('dm-to').textContent = DM.length;
-  var and = 0, con = 0, inc = 0;
-  for (var i = 0; i < DM.length; i++) {
-    if (DM[i].status === 'em_andamento') { and++; }
-    if (DM[i].status === 'concluida') { con++; }
-    if (DM[i].completude < 100) { inc++; }
-  }
-  document.getElementById('dm-an').textContent = and;
-  document.getElementById('dm-cn').textContent = con;
-  document.getElementById('dm-in').textContent = inc;
-  var tipos = ['GTM','Arte/Design','Vídeo','Landing Page','Outro'];
-  var cols = ['#7C3AED','#2563EB','#16A34A','#F59E0B','#94A3B8'];
-  var counts = [];
-  for (var i = 0; i < tipos.length; i++) {
-    var cnt = 0;
-    for (var j = 0; j < DM.length; j++) { if (DM[j].tipoLabel === tipos[i]) { cnt++; } }
-    counts.push(cnt);
-  }
-  var max = 1;
-  for (var i = 0; i < counts.length; i++) { if (counts[i] > max) { max = counts[i]; } }
-  var html = '';
-  for (var i = 0; i < tipos.length; i++) {
-    if (!counts[i]) { continue; }
-    var label = tipos[i].length > 10 ? tipos[i].slice(0,9) + '…' : tipos[i];
-    html += '<div class="bro"><span class="bll">' + label + '</span><div class="bt"><div class="bf" style="width:' + Math.round(counts[i]/max*100) + '%;background:' + cols[i] + '"></div></div><span class="bv">' + counts[i] + '</span></div>';
-  }
-  document.getElementById('dm-ct').innerHTML = html;
-  var total = 0;
-  for (var i = 0; i < DM.length; i++) { total += DM[i].completude || 0; }
-  document.getElementById('dm-sm').textContent = DM.length ? Math.round(total/DM.length) + '%' : '0%';
-}
-
-function rD() {
-  var n = (document.getElementById('dm-fn') ? document.getElementById('dm-fn').value : '').toLowerCase();
-  var ft = document.getElementById('dm-ft') ? document.getElementById('dm-ft').value : '';
-  var fs = document.getElementById('dm-fs') ? document.getElementById('dm-fs').value : '';
-  var html = '';
-  for (var i = 0; i < DM.length; i++) {
-    var x = DM[i];
-    if (n && (x.titulo || '').toLowerCase().indexOf(n) < 0) { continue; }
-    if (ft && x.tipoLabel !== ft) { continue; }
-    if (fs && x.status !== fs) { continue; }
-    html += '<div class="cd" style="display:flex;align-items:center;gap:14px">' +
-      '<div style="flex:1"><div style="font-size:14px;font-weight:600;margin-bottom:6px">' + x.titulo + '</div>' +
-      '<div style="display:flex;gap:6px;flex-wrap:wrap">' + (x.tipoLabel ? '<span class="bdg bbl">' + x.tipoLabel + '</span>' : '') +
-      '<span class="bdg bgy">' + (x.statusLabel || x.status || '') + '</span></div>' +
-      (x.objetivo ? '<div style="font-size:12px;color:#475569;margin-top:6px;line-height:1.4">' + x.objetivo.slice(0,100) + (x.objetivo.length>100?'…':'') + '</div>' : '') +
-      '</div>' +
-      '<div style="text-align:right;flex-shrink:0">' +
-      '<div style="font-size:11px;color:#475569">' + (x.solicitante || '') + '</div>' +
-      '<div style="font-size:11px;color:#475569;margin-top:2px">' + (x.prazo || '') + '</div>' +
-      '<div style="background:#E2E8F0;border-radius:99px;height:5px;width:60px;overflow:hidden;margin-top:6px"><div style="height:100%;border-radius:99px;background:' + (x.completude >= 80 ? '#16A34A' : x.completude >= 50 ? '#F59E0B' : '#DC2626') + ';width:' + x.completude + '%"></div></div>' +
-      '<div style="font-size:10px;color:#475569;margin-top:2px">' + x.completude + '%</div>' +
-      '</div></div>';
-  }
-  document.getElementById('dl-bd').innerHTML = html || '<div class="em"><div class="ei">📋</div><p>Nenhuma demanda encontrada.</p></div>';
-}
-
-function rI() {
-  var html = '';
-  for (var i = 0; i < DM.length; i++) {
-    var x = DM[i];
-    if (x.completude >= 100) { continue; }
-    var miss = [];
-    if (!x.titulo) { miss.push('Título'); }
-    if (!x.tipoLabel) { miss.push('Tipo'); }
-    if (!x.solicitante) { miss.push('Solicitante'); }
-    if (!x.prazo) { miss.push('Prazo'); }
-    html += '<div class="cd"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><div style="font-size:14px;font-weight:600">' + x.titulo + '</div><span class="bdg bam">' + x.completude + '% completo</span></div>' +
-      '<div style="font-size:12px;color:#DC2626">Faltando: ' + miss.join(', ') + '</div>' +
-      '<div style="background:#E2E8F0;border-radius:99px;height:6px;overflow:hidden;margin-top:8px"><div style="height:100%;border-radius:99px;background:#F59E0B;width:' + x.completude + '%"></div></div></div>';
-  }
-  document.getElementById('di-bd').innerHTML = html || '<div class="em"><div class="ei">✅</div><p>Nenhuma demanda incompleta!</p></div>';
 }
 
 var WF = {
@@ -861,22 +1108,20 @@ function wRv() {
   for (var i = 0; i < fields.length; i++) { all.push(fields[i].id); }
   var filled = 0;
   for (var i = 0; i < all.length; i++) { if (gv(all[i])) { filled++; } }
-  var pct = Math.round(filled / all.length * 100);
+  var pct2 = Math.round(filled / all.length * 100);
   var fill = document.getElementById('wc-f');
-  fill.style.width = pct + '%';
-  fill.style.background = pct >= 80 ? '#16A34A' : pct >= 50 ? '#F59E0B' : '#DC2626';
-  document.getElementById('wc-v').textContent = pct + '% completo';
+  fill.style.width = pct2 + '%';
+  fill.style.background = pct2 >= 80 ? '#16A34A' : pct2 >= 50 ? '#F59E0B' : '#DC2626';
+  document.getElementById('wc-v').textContent = pct2 + '% completo';
   var miss = [];
   var lbl = {'dm-ti':'Título','dm-tp':'Tipo','dm-ob':'Objetivo','dm-sl':'Solicitante'};
   for (var i = 0; i < req.length; i++) { if (!gv(req[i])) { miss.push(lbl[req[i]] || req[i]); } }
-  if (miss.length) {
-    document.getElementById('wz-ml').innerHTML = miss.join('<br>');
-    sh('wz-ms');
-  } else { hd('wz-ms'); }
+  if (miss.length) { document.getElementById('wz-ml').innerHTML = miss.join('<br>'); sh('wz-ms'); }
+  else { hd('wz-ms'); }
 }
 
 function svD() {
-  alert('Nova demanda salva localmente. Configure o Notion para salvar na base.');
+  alert('Funcionalidade de envio ao Notion em breve.');
 }
 
 function sh(id) {
